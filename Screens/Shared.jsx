@@ -35,8 +35,8 @@ const Shared = () => {
       ) : (
         <View style={styles.container}>
           <Text style={styles.text}>Shared ID: {id}</Text>
-          <Text style={styles.text}>Shared ID: {id}</Text>
-          <Text style={styles.text}>Shared ID: {id}</Text>
+          <Text style={styles.text}>Summary: {data}</Text>
+          
         </View>
       )}
     </View>
