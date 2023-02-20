@@ -93,13 +93,13 @@ const Home = () => {
   //       console.log(error);
   //     });
   // }, []);
-
   const shareFunc = async (id) => {
     console.log("ID: ", id);
     try {
+      const recipe = data.find((recipe) => recipe.id === id);
       const result = await Share.share({
         message: "Check out this recipe!",
-        url: `exp://192.168.0.3:19000/--/Shared?id=${id}`,
+        url: `exp://192.168.1.194:19000/--/Shared?id=${id}&picture=${recipe.image}`,
       });
       if (result.action === Share.sharedAction) {
         if (result.activityType) {
